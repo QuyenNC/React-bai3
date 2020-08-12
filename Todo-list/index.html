@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo-list</title>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script>
+        const todos = ['Go to market','Buy food','Make dinner'];
+        const todosList = todos.map(function (x){
+            return React.createElement('li',null,x);
+        })
+        const listUl = React.createElement('ul',null,todosList);
+        const  App = document.getElementById('app');
+        ReactDOM.render(listUl, App);
+    </script>
+</body>
+</html>
